@@ -1,8 +1,7 @@
 ![Image](https://theentertainmentnut.files.wordpress.com/2012/09/nf0.jpg)
 # Hello world
-*Welcome to my website*
-
-**visit my other page, [Link](https://fdang26.github.io/cse15l-lab-reports/foster)**
+*Welcome to my website*  
+**visit my other page, [foster](https://fdang26.github.io/cse15l-lab-reports/foster)**
 ---
 ## Simple for loop
 ```
