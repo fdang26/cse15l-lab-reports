@@ -1,7 +1,7 @@
 Foster Dang  
 Published 1/11/2023  
 Last Updated 1/11/2023  
-CSE 15L
+CSE 15L  
 Content heavily lended from https://ucsd-cse15l-w23.github.io/week/week1/#week-1-lab-report
 
 # Tutorial for Noobs<br><br>1. VSCode
@@ -26,7 +26,7 @@ If you're on Windows, the first step is to install git, if you haven't before. H
 Open a terminal by clicking this thing, or pressing `Ctrl` + `Shift` + `` ` ``:  
 ![image](https://user-images.githubusercontent.com/96316038/212623744-32cd79e1-3a89-4006-aa2c-1e464178b678.png)
 
-To use Git in this terminal follow this wonderful guide from a user on stackoverflow:
+To use Git in this terminal follow this wonderful guide from a user on stackoverflow:  
 [Bash on Windows VScode](https://stackoverflow.com/a/50527994)  
 <br>
 Then, go here to find your account that you'll log in on. Your account name should look like `cs15lwi23zz@ieng6.ucsd.edu`:
@@ -74,4 +74,10 @@ cat /home/linux/ieng6/cs15lwi23/public/hello.txt
 ```
 When you want to log off just press `Ctrl` + `D` or type and enter "exit".
 When you log off the remote computer and you're back onto your local computer, try these commands to navigate and change your files with Bash:
-`cd`, `ls`, `pwd`, `mkdir`, and `cp`
+`cd`, `ls`, `pwd`, `mkdir`, and `cp`  
+VScode has a nice distinction between terminals, local vs remote.   
+You local computer's terminal will be in color and look like this:
+![image](https://user-images.githubusercontent.com/96316038/212629934-b47b2e65-3c12-4f8e-9c2b-3896b3243d84.png)
+
+Meanwhile, your remote computer's terminal will look like this:  
+![image](https://user-images.githubusercontent.com/96316038/212630102-2615f52f-faf0-4e82-9a09-fa3ac1e2676f.png)
