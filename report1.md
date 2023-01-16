@@ -20,7 +20,7 @@ Once you have it installed, open it. Congrats, you are now a VScoder. You should
 Now that you're in VScode, it's time to remotely connect to the server. This will let you connect to a remote computer and work on it. 
 <br><br>
 If you're on Windows, the first step is to install git, if you haven't before. Here's the link, knock yourself out:  
-<br>[Git for Windows](https://gitforwindows.org/)  
+[Git for Windows](https://gitforwindows.org/)  
 <br>From here on out, I will describe the process from a Windows point of view, as that is the way that I did it.  
 <br>
 Open a terminal by clicking this thing, or pressing `Ctrl` + `Shift` + `` ` ``:  
@@ -76,8 +76,8 @@ When you want to log off just press `Ctrl` + `D` or type and enter "exit".
 When you log off the remote computer and you're back onto your local computer, try these commands to navigate and change your files with Bash:
 `cd`, `ls`, `pwd`, `mkdir`, and `cp`  
 VScode has a nice distinction between terminals, local vs remote.   
-You local computer's terminal will be in color and look like this:
+You local computer's terminal will be in color and look like this:  
 ![image](https://user-images.githubusercontent.com/96316038/212629934-b47b2e65-3c12-4f8e-9c2b-3896b3243d84.png)
-
+<br>
 Meanwhile, your remote computer's terminal will look like this:  
 ![image](https://user-images.githubusercontent.com/96316038/212630102-2615f52f-faf0-4e82-9a09-fa3ac1e2676f.png)
