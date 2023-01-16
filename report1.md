@@ -4,7 +4,7 @@ Last Updated 1/11/2023
 CSE 15L  
 Content heavily lended from https://ucsd-cse15l-w23.github.io/week/week1/#week-1-lab-report
 
-# Tutorial for Noobs<br><br>1. VSCode
+# Tutorial for Week 1 of CSE 15L<br><br>1. VSCode
 So, the first order of business is downloading Visual Studio Code (VScode).<br>
 <br>
 Click this [link](https://code.visualstudio.com/download), bro.  
