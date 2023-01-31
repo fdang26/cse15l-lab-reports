@@ -1,23 +1,64 @@
+## Part 1
 ![](/docs/assets/stringSever.png)
 ![](/docs/assets/heyther.png)
-This calls the handleRequest method within Handler and provides the url as an arguement. The instance variables of Handler are initialized to an empty string for message and 0 for messageCount. The message variable is updated and appends the query string into the message string. messageCount is also updated is incremented by one.
+This calls the handleRequest method within Handler and provides the url as an arguement. The instance variables of Handler are initialized to an empty string for message and 0 for messageCount. The message variable is updated and appends the part of the query string after the equals sign into the message string. messageCount is also updated is incremented by one.
 
 ![](/docs/assets/howsitgoin.png)
 This calls the handleRequest method again and also provides the url as an argument. The instance variables are updated: message is updated with a new line as well as the part of the query after the equals sign being appended, and message count is incremented. 
 
-Part 2
+## Part 2
 Choose one of the bugs from lab 3.
 
-Provide:
+```
+@Test
+  public void testAverageWithoutLowest(){
+    double[] input1 = { 1.0, 1.0, 2.0, 4.0, 5.0};
+    assertEquals(3.0, ArrayExamples.averageWithoutLowest(input1), 0.0);
+  }
+```
+```
+@Test
+  public void TestAverageWithoutLowest(){
+    double[] input1 = { 1.0, 4.0, 5.0 };
+    assertEquals(4.5, ArrayExamples.averageWithoutLowest(input1), 0.0);
+  }
+```
+![1 Failed Test](/docs/assets/tests.png)
 
-A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
-An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
-The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
-The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
-Briefly describe why the fix addresses the issue.
+**BEFORE**
+```
+  static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      if(num != lowest) { sum += num; }
+    }
+    return sum / (arr.length - 1);
+  }
+```
+**AFTER**
+```
+  static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+       sum += num;
+    }
+    int average = (sum - lowest) / (arr.length - 1);
+    return average;
+  }
+```
+This fixes the issue because instead of removing all the instances of the lowest value, it removes the lowest value from the average just once.
 
-Part 3
-In a couple of sentences, describe something you learned from lab in week 2 or 3 that you didn’t know before.
-
+## Part 3
+These recent labs have taught me how to use JUnit testing to creater unit testers for my code, more specifically the assertEquals method within the JUnit library. While I will still use System.out.println statements within my code to test it, Junit testing serves as a structured method of ensuring my code is matching my expectations.
 
 
