@@ -56,7 +56,7 @@ Choose one of the bugs from lab 3.
     return average;
   }
 ```
-This fixes the issue because instead of removing all the instances of the lowest value, it removes the lowest value from the average just once.
+This fixes the issue because instead of skipping over all the instances of the lowest variable, which might subtract too many values, it removes the lowest value from the average just once by subtracting lowest once from the sum of the double array.
 
 ## Part 3
 These recent labs have taught me how to use JUnit testing to creater unit testers for my code, more specifically the assertEquals method within the JUnit library. While I will still use System.out.println statements within my code to test it, Junit testing serves as a structured method of ensuring my code is matching my expectations.
