@@ -43,30 +43,43 @@ $ grep -w "side" WhatToHongKong.txt
 ```  
 This option is called "whole word" as in it matches only with words that fully match, not just partially. (e.g. "John" matches with John but not Johnson)
   
-## grep -o  
+## grep -E  
 ```
-$ grep -o "The" WhatToHongKong.txt 
-The
-The
-The
-The
-The
-The
-The
-The
-The
-The
+$ grep -Erl "Hong Kong|Taiwan"
+written_2/non-fiction/OUP/Abernathy/ch1.txt
+written_2/non-fiction/OUP/Abernathy/ch15.txt
+written_2/non-fiction/OUP/Berk/ch2.txt
+written_2/travel_guides/berlitz1/HandRHongKong.txt
+written_2/travel_guides/berlitz1/HandRJamaica.txt
+written_2/travel_guides/berlitz1/HistoryHongKong.txt
+written_2/travel_guides/berlitz1/IntroHongKong.txt
+written_2/travel_guides/berlitz1/WhatToHongKong.txt
+written_2/travel_guides/berlitz1/WhatToMalaysia.txt
+written_2/travel_guides/berlitz1/WhereToHongKong.txt
+written_2/travel_guides/berlitz1/WhereToIndia.txt
+written_2/travel_guides/berlitz1/WhereToMalaysia.txt        
+written_2/travel_guides/berlitz2/Bahamas-WhatToDo.txt
+written_2/travel_guides/berlitz2/Beijing-WhatToDo.txt       
+written_2/travel_guides/berlitz2/California-WhereToGo.txt   
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
+written_2/travel_guides/berlitz2/China-History.txt
+written_2/travel_guides/berlitz2/China-WhereToGo.txt
 ...
 ``` 
 ```
-$ grep -o "where" WhatToHongKong.txt 
-where
-where
-where
-where
-where
-where
-where
-where
+$ grep -Erl "kayak|paddleboard"
+written_2/travel_guides/berlitz1/HandRHawaii.txt
+written_2/travel_guides/berlitz1/HandRIsrael.txt
+written_2/travel_guides/berlitz1/HandRJamaica.txt
+written_2/travel_guides/berlitz1/WhatToIsrael.txt
+written_2/travel_guides/berlitz1/WhatToLosAngeles.txt       
+written_2/travel_guides/berlitz1/WhereToFrance.txt
+written_2/travel_guides/berlitz2/Bahamas-WhereToGo.txt
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
+written_2/travel_guides/berlitz2/Cancun-WhereToGo.txt       
+written_2/travel_guides/berlitz2/Crete-WhatToDo.txt
+written_2/travel_guides/berlitz2/PuertoRico-WhatToDo.txt
+written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt      
+written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
-This option displays only the match in the printed message, rather than the whole line that contains the match.
+(The option -r is explained above, and the option -l replaces the output to just be the name of the file where the match was found) The option -E, regex option, allows for a regular expression (regex) to serve as the pattern to match with and can be useful to search according to a pattern rather than hardcoded strings. In the examples above, I used "|" in the regex to add multiple keywords to search matches for.
