@@ -41,7 +41,7 @@ $ grep -w "line" WhatToHongKong.txt
 $ grep -w "side" WhatToHongKong.txt 
         be more expensive than smaller “family” shops tucked away in the side
 ```  
-This option is called "whole word" as in it matches only with words that fully match, not just partially. (e.g. "John" matches with John but not Johnson) This can be used to weed out cases that may only partially match. 
+This option is called "whole word" as in it matches only with words that fully match, not just partially (e.g. "John" matches with John but not Johnson). This can be used to weed out cases that may only partially match. 
   
 ## grep -E  
 ```
