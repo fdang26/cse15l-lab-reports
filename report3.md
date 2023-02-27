@@ -82,4 +82,4 @@ written_2/travel_guides/berlitz2/PuertoRico-WhatToDo.txt
 written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt      
 written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
-(The option -r is explained above, and the option -l replaces the output to just be the name of the file where the match was found) The option -E, regex option, allows for a regular expression (regex) to serve as the pattern to match with and can be useful to search according to a pattern rather than hardcoded strings. In the examples above, I used "|" in the regex to add multiple keywords to search matches for.
+(The option -r is explained above, and the option -l replaces the output to just be the name of the file where the match was found) The option -E, regex option, allows for a regular expression (regex) to serve as the pattern to match with and can be useful to search according to a pattern rather than hardcoded strings. In the examples above, I only used "|" in the regex to add multiple keywords to search for, but the -E flag can have many different applications.
