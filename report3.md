@@ -1,10 +1,10 @@
 ## grep options/flags   
 ## sources:  
-[Link used for options -r -B -w](https://www.youtube.com/watch?v=VGgTmxXp7xQ)
+[Link used for options -r -B](https://www.youtube.com/watch?v=VGgTmxXp7xQ)
 <br>
-[Link used for option -o](https://serverfault.com/questions/51014/dont-need-the-whole-line-just-the-match-from-regular-expression)  
-  
-  
+[Link used for option -o](https://serverfault.com/questions/51014/dont-need-the-whole-line-just-the-match-from-regular-expression)
+<br>
+[Link used for option -E](https://www.cyberciti.biz/faq/grep-regular-expressions/)  
 ## grep -r  
 ```
 $ grep -r "fountain of youth"
