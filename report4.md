@@ -18,7 +18,7 @@ Having the command `ssh cs15lwi23aln@ieng6.ucsd.edu` in my local terminal's hist
 ![](/docs/assets/lab72.png)
   
 I had the command `git clone git@github.com:fdang26/lab7.git` saved to my clipboard so all I had to do was paste it and then enter. While the system was 
-cloning the repo I entered the second set of commands (`cd lab<tab>) and entered it to change my working directory to the repo right after it finished cloning.
+cloning the repo I entered the second set of commands (`cd lab<tab>`) and entered it to change my working directory to the repo right after it finished cloning.
 
 # Step 6)
 *Keys pressed:* 
