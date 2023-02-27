@@ -14,7 +14,7 @@ written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt:The whole cave park is
 $ grep -r "walking their dogs"
 written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:And where have all the Anglos gone? Many of the upper-middle-class variety are holding out in Westmount. This bastion of the old Montréal élite of British origin became a prime target for the more violent members of the separatist Front de libération du Québec, who in the 1960s set off bombs in Westmount’s mailboxes. Those not put off by this can still be seen in tweeds and cavalry twill, walking their dogs around Summit Park, where the Belvedere affords a fine view of the city. Head for the tree-lined Summit Road, Summit Crescent, and Summit Circle and you’ll spot their ivy-covered mansions and grey-stone turreted châteaux half-concealed behind trees and shrubbery at the top of a grassy slope. The architecture here is a wonderful compendium of French Romanesque, German Gothic, and Italian Renaissance. Westmount Square gives you a sharp but not inelegant jolt back into the 20th century, with the black steel and glass office buildings of Mies van der Rohe.
 ```
-This option is called "recursive" and searches through all the files in the current working directory and all sub-directories for the pattern.
+This option is called "recursive" and searches through all the files in the current working directory and all sub-directories for the pattern. This can be helpful if you want to search through all the subdirectories relative to your current working directory; you can execute one grep command to search through it all, rather than using grep on each individual directory.
 
 ## grep -B  
 ```
@@ -30,7 +30,7 @@ $ grep -B 1 "fun" WhatToHongKong.txt
         Hong Kong has many attractions that appeal to children of
         all ages. Hong Kong’s many beaches are especially fun for children.
 ```
-This option is called "Behind" and shows a certain number of lines before the matched line, and accepts an argument that tells it how many lines to display.
+This option is called "Behind" and shows a certain number of lines before the matched line, and accepts an argument that tells it how many lines to display. This is particularly useful when coding from the command line as it allows you look at the surrounding code to provide context that can explain what the matched line does.
   
 ## grep -w  
 ```
@@ -41,7 +41,7 @@ $ grep -w "line" WhatToHongKong.txt
 $ grep -w "side" WhatToHongKong.txt 
         be more expensive than smaller “family” shops tucked away in the side
 ```  
-This option is called "whole word" as in it matches only with words that fully match, not just partially. (e.g. "John" matches with John but not Johnson)
+This option is called "whole word" as in it matches only with words that fully match, not just partially. (e.g. "John" matches with John but not Johnson) This can be used to weed out cases that may only partially match. 
   
 ## grep -E  
 ```
