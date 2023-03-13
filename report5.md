@@ -1,5 +1,4 @@
-## find options  
-## sources:  
+# find options    
 [Link](https://linuxhandbook.com/find-command-examples/) used
 <br>
 ## find -name 
