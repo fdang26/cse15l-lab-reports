@@ -1,5 +1,5 @@
 # find options    
-[Link](https://linuxhandbook.com/find-command-examples/) used
+**Sources used:** [https://linuxhandbook.com/find-command-examples/](https://linuxhandbook.com/find-command-examples/)
 <br>
 ## find -name 
 ```
@@ -17,7 +17,7 @@
 ./travel_guides/berlitz1/WhatToHongKong.txt
 ./travel_guides/berlitz1/WhereToHongKong.txt
 ```
-This option is probably my most used option for this command. With the -name option, you can search through directories for a file or a directory that matches the argument that you provide, as opposed to just spitting out all of the files and subdirectories of the given path. (The stars I used in search expression just mean that the filename can have any text surrounding the phrase "HongKong" as long as it contains HongKong.)
+This option is probably my most used option for this command. With the `-name option`, you can search through directories for a file or a directory that matches the argument that you provide, as opposed to just spitting out all of the files and subdirectories of the given path. (The stars (`*`) I used in search expression just mean that the filename can have any text surrounding the phrase "HongKong" as long as it contains "HongKong".)
 
 ## find  -type d  
 For example, if you knew the directory was "berli"-something, you could find just the directories and not include the file matches.
@@ -93,4 +93,4 @@ This option allows you to search for multiple patterns within one command so tha
 ./travel_guides/berlitz1
 ./travel_guides/berlitz2
 ```
-Find can be a finnicky command sometimes because it searches recursively through *all* of the subdirectories, and with some folders containing a lot of files, that can be a bit much. With the maxdepth option, the find command can kind of function as `ls` with a specfied depth of search, given that you don't use any other options. In short, the `-maxdepth` option can be useful for limiting the range of the command's search.
+Find can be an excessive command sometimes because it searches recursively through *all* of the subdirectories, and with some folders containing a lot of files, the output can become a bit much. With the `-maxdepth` option, the find command can kind of function as `ls` with a specfied depth of search, given that you don't use any other options. In short, the `-maxdepth` option can be useful for limiting the range of the command's search.
