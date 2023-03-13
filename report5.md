@@ -1,4 +1,4 @@
-## find options/flags   
+## find options  
 ## sources:  
 [Link](https://linuxhandbook.com/find-command-examples/) used
 <br>
@@ -28,7 +28,7 @@ For example, if you knew the directory was "berli"-something, you could find jus
 ./travel_guides/berlitz2
 ```
   
-vs.  
+vs. without type -d 
   
 ```
 [cs15lwi23aln@ieng6-201]:written_2:469$ find -iname "berli*"
@@ -69,48 +69,29 @@ This option restricts the search results to only be directories since, by defaul
 ./travel_guides/berlitz1/WhereToItaly.txt addition, most top-line hotels have upscale
 ```
 ```
-$ grep -w "side" WhatToHongKong.txt 
-        be more expensive than smaller “family” shops tucked away in the side
+[cs15lwi23aln@ieng6-201]:written_2:472$ find -name "*Cuba*" -o -name "*Rico*"
+./travel_guides/berlitz2/Cuba-History.txt
+./travel_guides/berlitz2/Cuba-WhatToDo.txt
+./travel_guides/berlitz2/Cuba-WhereToGo.txt        
+./travel_guides/berlitz2/PuertoRico-History.txt    
+./travel_guides/berlitz2/PuertoRico-WhatToDo.txt   
+./travel_guides/berlitz2/PuertoRico-WhereToGo.txt 
 ```  
- 
+This option allows you to search for multiple patterns within one command so that the output will displays the matches for both. This is applicable if you want to find multiple files/directories at once without having to separate your searches which would consequently separate the results. 
   
 ## find -maxdepth
 ```
-$ grep -Erl "Hong Kong|Taiwan"
-written_2/non-fiction/OUP/Abernathy/ch1.txt
-written_2/non-fiction/OUP/Abernathy/ch15.txt
-written_2/non-fiction/OUP/Berk/ch2.txt
-written_2/travel_guides/berlitz1/HandRHongKong.txt
-written_2/travel_guides/berlitz1/HandRJamaica.txt
-written_2/travel_guides/berlitz1/HistoryHongKong.txt
-written_2/travel_guides/berlitz1/IntroHongKong.txt
-written_2/travel_guides/berlitz1/WhatToHongKong.txt
-written_2/travel_guides/berlitz1/WhatToMalaysia.txt
-written_2/travel_guides/berlitz1/WhereToHongKong.txt
-written_2/travel_guides/berlitz1/WhereToIndia.txt
-written_2/travel_guides/berlitz1/WhereToMalaysia.txt        
-written_2/travel_guides/berlitz2/Bahamas-WhatToDo.txt
-written_2/travel_guides/berlitz2/Beijing-WhatToDo.txt       
-written_2/travel_guides/berlitz2/California-WhereToGo.txt   
-written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
-written_2/travel_guides/berlitz2/China-History.txt
-written_2/travel_guides/berlitz2/China-WhereToGo.txt
-...
+[cs15lwi23aln@ieng6-201]:written_2:478$ find -maxdepth 2
+.
+./non-fiction
+./non-fiction/OUP
+./travel_guides
+./travel_guides/berlitz1
+./travel_guides/berlitz2
 ``` 
 ```
-$ grep -Erl "kayak|paddleboard"
-written_2/travel_guides/berlitz1/HandRHawaii.txt
-written_2/travel_guides/berlitz1/HandRIsrael.txt
-written_2/travel_guides/berlitz1/HandRJamaica.txt
-written_2/travel_guides/berlitz1/WhatToIsrael.txt
-written_2/travel_guides/berlitz1/WhatToLosAngeles.txt       
-written_2/travel_guides/berlitz1/WhereToFrance.txt
-written_2/travel_guides/berlitz2/Bahamas-WhereToGo.txt
-written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
-written_2/travel_guides/berlitz2/Cancun-WhereToGo.txt       
-written_2/travel_guides/berlitz2/Crete-WhatToDo.txt
-written_2/travel_guides/berlitz2/PuertoRico-WhatToDo.txt
-written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt      
-written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
+[cs15lwi23aln@ieng6-201]:written_2:479$ find -maxdepth 2 -iname "*berl*"
+./travel_guides/berlitz1
+./travel_guides/berlitz2
 ```
-(The option -r is explained above, and the option -l replaces the output to just be the name of the file where the match was found) The option -E, regex option, allows for a regular expression (regex) to serve as the pattern to match with and can be useful to search according to a pattern rather than hardcoded strings. In the examples above, I only used "|" in the regex to add multiple keywords to search for, but the -E flag can have many different applications.
+Find can be a finnicky command sometimes because it searches recursively through *all* of the subdirectories, and with some folders containing a lot of files, that can be a bit much. With the maxdepth option, the find command can kind of function as `ls` with a specfied depth of search, given that you don't use any other options. In short, the `-maxdepth` option can be useful for limiting the range of the command's search.
